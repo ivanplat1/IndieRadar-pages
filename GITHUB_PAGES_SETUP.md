@@ -16,10 +16,12 @@ Use a separate **public** repository for static report pages only (no secrets in
 
 4. Add secrets to **IndieRadar** (private repo):
    - `PAGES_REPOSITORY` = `ivanplat1/IndieRadar-pages`
-   - `PAGES_DEPLOY_TOKEN` = your PAT
+   - `PAGES_DEPLOY_TOKEN` = fine-grained PAT with **Contents: Read and write** on `IndieRadar-pages`
    - `GITHUB_PAGES_BASE_URL` = `https://ivanplat1.github.io/IndieRadar-pages/report`
 
-5. Run workflow **Deploy Report Pages** (or push to `docs/` on the tracked branch).
+5. Run workflow **Deploy Report Pages** (Actions tab) or push changes under `docs/`.
+
+The deploy job uses `git rsync` (not JamesIves action) and skips gracefully if secrets are missing.
 
 ## URLs
 
