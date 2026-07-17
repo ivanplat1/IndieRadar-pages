@@ -41,6 +41,12 @@ function isBulletLine(line) {
   return /^[-•]\s/.test(trimmed);
 }
 
+function isNoteLabel(content) {
+  const normalized = content.replace(/\*\*/g, "");
+
+  return normalized.startsWith("Примеры отзывов") || normalized.startsWith("Review examples");
+}
+
 function markdownToHtml(markdown) {
   const lines = markdown.split("\n");
   const blocks = [];
@@ -61,7 +67,7 @@ function markdownToHtml(markdown) {
     }
 
     if (line.startsWith("## ")) {
-      blocks.push(`<h2>${escapeHtml(line.slice(3))}</h2>`);
+      blocks.push(`<h2>${formatInlineMarkdown(line.slice(3))}</h2>`);
       index += 1;
       continue;
     }
@@ -98,7 +104,7 @@ function markdownToHtml(markdown) {
     const content = trimIndent(line);
 
     if (indent > 0) {
-      const className = content.startsWith("Примеры отзывов") || content.startsWith("Review examples")
+      const className = isNoteLabel(content)
         ? "note-label"
         : /^\d+\.\s/.test(content)
           ? "review-quote"
