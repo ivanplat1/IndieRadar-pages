@@ -1,0 +1,51 @@
+{
+  "apps": [
+    {
+      "name": "Forest: Focus for Productivity",
+      "number": 1
+    },
+    {
+      "name": "Google Agenda",
+      "number": 2
+    },
+    {
+      "name": "Opal: Screen Time Control",
+      "number": 3
+    },
+    {
+      "name": "Notion: notes, tasks, AI",
+      "number": 4
+    },
+    {
+      "name": "Habit Tracker",
+      "number": 5
+    },
+    {
+      "name": "Structured - Daily Planner",
+      "number": 6
+    },
+    {
+      "name": "Habitica",
+      "number": 7
+    },
+    {
+      "name": "Flora - Green Focus",
+      "number": 8
+    },
+    {
+      "name": "Google Keep - noter og lister",
+      "number": 9
+    },
+    {
+      "name": "Notion: Notes, Tasks, AI",
+      "number": 10
+    },
+    {
+      "name": "Finch: Self-Care Pet",
+      "number": 11
+    }
+  ],
+  "generatedAt": "2026-07-17T16:12:02.140Z",
+  "locale": "ru",
+  "nicheSlug": "productivity"
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IndieRadar Report</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --link: #2563eb;
+      --error: #b91c1c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0d12;
+        --card: #151922;
+        --text: #f3f4f6;
+        --muted: #9ca3af;
+        --border: #2a3140;
+        --link: #60a5fa;
+        --error: #f87171;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+    h1 { margin: 0 0 12px; font-size: 1.5rem; line-height: 1.25; }
+    h2 { margin: 28px 0 12px; font-size: 1.05rem; }
+    p { margin: 0 0 12px; white-space: pre-wrap; }
+    a { color: var(--link); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.92em;
+      background: rgba(127, 127, 127, 0.12);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-bottom: 16px;
+    }
+    .error {
+      color: var(--error);
+      padding: 12px 14px;
+      border: 1px solid color-mix(in srgb, var(--error) 35%, var(--border));
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--error) 8%, var(--card));
+    }
+    .loading { color: var(--muted); }
+    footer {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.875rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <div id="status" class="loading">Загрузка…</div>
+      <div id="content" hidden></div>
+    </article>
+    <footer>IndieRadar</footer>
+  </main>
+  <script>
+    function escapeHtml(value) {
+      return value
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll("\"", "&quot;");
+    }
+
+    function formatInlineMarkdown(line) {
+      let formatted = escapeHtml(line);
+      formatted = formatted.replaceAll(/`([^`]+)`/g, "<code>$1</code>");
+      formatted = formatted.replaceAll(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+      formatted = formatted.replaceAll(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+      formatted = formatted.replaceAll(/_(.+?)_/g, "<i>$1</i>");
+      return formatted;
+    }
+
+    function markdownToHtml(markdown) {
+      const blocks = [];
+      let paragraph = [];
+
+      function flushParagraph() {
+        if (paragraph.length === 0) {
+          return;
+        }
+
+        blocks.push(`<p>${paragraph.map((line) => formatInlineMarkdown(line)).join("<br>")}</p>`);
+        paragraph = [];
+      }
+
+      for (const rawLine of markdown.split("\n")) {
+        const line = rawLine.trimEnd();
+
+        if (!line.trim()) {
+          flushParagraph();
+          continue;
+        }
+
+        if (line.startsWith("# ")) {
+          flushParagraph();
+          blocks.push(`<h1>${escapeHtml(line.slice(2))}</h1>`);
+          continue;
+        }
+
+        if (line.startsWith("## ")) {
+          flushParagraph();
+          blocks.push(`<h2>${escapeHtml(line.slice(3))}</h2>`);
+          continue;
+        }
+
+        paragraph.push(line);
+      }
+
+      flushParagraph();
+      return blocks.join("\n");
+    }
+
+    function readParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        app: params.get("app"),
+        locale: params.get("locale") || "ru",
+        niche: params.get("niche") || "productivity"
+      };
+    }
+
+    function buildDataUrl({ niche, locale, app }) {
+      const repoRoot = new URL("../data/reports/", window.location.href);
+      const file = app ? `${niche}/${locale}/app-${app}.json` : `${niche}/${locale}/daily.json`;
+      return new URL(file, repoRoot).toString();
+    }
+
+    function rewriteReportLinks(markdown, { niche, locale }) {
+      return markdown.replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        (match, label, href) => {
+          try {
+            const url = new URL(href, window.location.href);
+
+            if (url.pathname.endsWith("/report/") || url.pathname.endsWith("/report/index.html")) {
+              const app = url.searchParams.get("app");
+              const next = new URL(window.location.href);
+              next.searchParams.set("niche", url.searchParams.get("niche") || niche);
+              next.searchParams.set("locale", url.searchParams.get("locale") || locale);
+
+              if (app) {
+                next.searchParams.set("app", app);
+              } else {
+                next.searchParams.delete("app");
+              }
+
+              return `[${label}](${next.toString()})`;
+            }
+          } catch {
+            return match;
+          }
+
+          return match;
+        }
+      );
+    }
+
+    async function loadReport() {
+      const status = document.getElementById("status");
+      const content = document.getElementById("content");
+      const params = readParams();
+      const dataUrl = buildDataUrl(params);
+
+      status.textContent = "Загрузка…";
+      content.hidden = true;
+
+      try {
+        const response = await fetch(dataUrl, { cache: "no-store" });
+
+        if (!response.ok) {
+          throw new Error(`Report data not found (${response.status}).`);
+        }
+
+        const payload = await response.json();
+        const markdown = rewriteReportLinks(payload.markdown || "", params);
+        const generatedAt = payload.generatedAt
+          ? new Date(payload.generatedAt).toLocaleString(params.locale === "ru" ? "ru-RU" : "en-US")
+          : "";
+
+        document.title = payload.type === "app"
+          ? `${payload.appName || "App"} · IndieRadar`
+          : `IndieRadar · ${params.niche}`;
+
+        status.hidden = true;
+        content.hidden = false;
+        content.innerHTML = [
+          `<div class="meta">${escapeHtml(params.niche)} · ${escapeHtml(params.locale)}${generatedAt ? ` · ${escapeHtml(generatedAt)}` : ""}</div>`,
+          markdownToHtml(markdown)
+        ].join("\n");
+      } catch (error) {
+        status.hidden = false;
+        content.hidden = true;
+        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Пример: <code>?niche=productivity&amp;locale=ru&amp;app=1</code></div>`;
+      }
+    }
+
+    loadReport();
+  </script>
+</body>
+</html>
