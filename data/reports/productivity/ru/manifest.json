@@ -6,13 +6,13 @@
       "number": 1
     },
     {
-      "id": "e84470be-9bee-40f4-abcb-95ca3a669f53",
-      "name": "Google Calendar",
+      "id": "ff003297-11c8-40ec-8012-62e90969df01",
+      "name": "Google Agenda",
       "number": 2
     },
     {
-      "id": "22fe0406-e691-47b5-9fd6-bc567be23108",
-      "name": "Notion: Notas, tareas e IA",
+      "id": "75ced42c-05ed-45c8-a743-3caf9fa68c2b",
+      "name": "Notion: Ant, Uppg, AI",
       "number": 3
     },
     {
@@ -21,28 +21,28 @@
       "number": 4
     },
     {
-      "id": "6f5237c9-71d4-437d-82e1-131305659ae3",
-      "name": "Google Keep: note ed elenchi",
+      "id": "e1b5177c-d0ea-4fda-939d-34efa5a25f09",
+      "name": "Google Keep",
       "number": 5
     },
     {
-      "id": "11fbad73-728f-4280-b747-b8e0c39b1317",
-      "name": "CamScanner - Escáner de PDF",
+      "id": "1304337f-2c51-4c23-863a-71a6cb1cfeb8",
+      "name": "CamScanner - PDF-skanner",
       "number": 6
-    },
-    {
-      "id": "32a379c1-4381-4f2b-8f45-b25826d980a2",
-      "name": "Opal: Screen Time Control",
-      "number": 7
-    },
-    {
-      "id": "b6c69722-0637-4817-8438-c97e3e4e1872",
-      "name": "Google Tasks",
-      "number": 8
     },
     {
       "id": "24d01c9a-2660-410f-9219-7cc462e83735",
       "name": "Microsoft OneNote: Save Notes",
+      "number": 7
+    },
+    {
+      "id": "32a379c1-4381-4f2b-8f45-b25826d980a2",
+      "name": "Opal: Screen Time Control",
+      "number": 8
+    },
+    {
+      "id": "b6c69722-0637-4817-8438-c97e3e4e1872",
+      "name": "Google Tasks",
       "number": 9
     },
     {
@@ -51,13 +51,13 @@
       "number": 10
     },
     {
-      "id": "74d2cdd3-e2ff-40fd-9107-9d061a2aa4aa",
-      "name": "Todoist: To do list—Calendario",
+      "id": "f37f1a0a-288b-4ce1-b6ea-30dc58ce08aa",
+      "name": "Todoist: to-dos och kalender",
       "number": 11
     },
     {
-      "id": "260a6071-6db1-4ef4-8f54-72f70369dbf5",
-      "name": "Notebook – notas, apuntes, IA",
+      "id": "662f5ae5-bc23-4538-bf90-4d91f2688020",
+      "name": "Notebook - Ta anteckningar",
       "number": 12
     },
     {
@@ -76,8 +76,8 @@
       "number": 15
     },
     {
-      "id": "95278319-c1d5-41da-8de6-621be0f92bcd",
-      "name": "Any.do - Tareas + Calendario",
+      "id": "9a565f49-1483-4ffd-9cb2-ce1aaf9acae9",
+      "name": "Any.do - Uppgifter + Kalender",
       "number": 16
     },
     {
@@ -101,7 +101,7 @@
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T17:26:03.153Z",
+  "generatedAt": "2026-07-20T17:43:55.803Z",
   "locale": "ru",
   "nicheSlug": "productivity"
 }

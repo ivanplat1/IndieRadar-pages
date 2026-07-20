@@ -31,8 +31,8 @@
       "number": 6
     },
     {
-      "id": "9adb314b-4fed-44fd-895b-672752137756",
-      "name": "Rosytalk - RP AI-personage",
+      "id": "234810c9-a286-48bd-a818-0b7ec47e9e46",
+      "name": "Rosytalk – RP AI-karaktär",
       "number": 7
     },
     {
@@ -86,22 +86,22 @@
       "number": 17
     },
     {
-      "id": "aea1bdde-fe81-4ceb-92b8-6fa35f20a293",
-      "name": "Telegram",
+      "id": "9c8e5ba6-db05-48d0-bcfc-7823f8dab3a5",
+      "name": "Discord - Tal, Spil, Hæng ud",
       "number": 18
-    },
-    {
-      "id": "07d07535-edc1-4d77-ae1a-b0148cfa5eb9",
-      "name": "Google Chat",
-      "number": 19
     },
     {
       "id": "87649601-9f8c-460d-87fc-0e5ff376adfb",
       "name": "Tipsy Chat: Live Your Story",
+      "number": 19
+    },
+    {
+      "id": "aea1bdde-fe81-4ceb-92b8-6fa35f20a293",
+      "name": "Telegram",
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T17:25:37.641Z",
+  "generatedAt": "2026-07-20T17:44:26.577Z",
   "locale": "ru",
   "nicheSlug": "ai-chat"
 }
