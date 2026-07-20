@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "PolyBuzz: Chat with AI Friends",
+      "number": 1
+    },
+    {
+      "name": "Talkie: Creative AI Community",
+      "number": 2
+    }
+  ],
+  "generatedAt": "2026-07-20T14:55:06.941Z",
+  "locale": "ru",
+  "nicheSlug": "ai-chat"
+}

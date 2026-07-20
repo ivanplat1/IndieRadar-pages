@@ -17,7 +17,9 @@ Use a separate **public** repository for static report pages only (no secrets in
 4. Add secrets to **IndieRadar** (private repo):
    - `PAGES_REPOSITORY` = `ivanplat1/IndieRadar-pages`
    - `PAGES_DEPLOY_TOKEN` = fine-grained PAT with **Contents: Read and write** on `IndieRadar-pages`
-   - `GITHUB_PAGES_BASE_URL` = `https://ivanplat1.github.io/IndieRadar-pages/report`
+   - Optional `REPORT_PAGES_BASE_URL` = `https://ivanplat1.github.io/IndieRadar-pages/report` (override; GitHub **rejects** secret names starting with `GITHUB_`)
+
+   Nightly crawl workflows already default `GITHUB_PAGES_BASE_URL` to the URL above. Set it in local `.env` for the Telegram bot.
 
 5. Run workflow **Deploy Report Pages** (Actions tab) or push changes under `docs/`.
 

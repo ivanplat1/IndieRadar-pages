@@ -48,6 +48,7 @@ When out of scope, reply briefly:
 | Telegram bot | `docs/TELEGRAM_EVALUATION_BOT_PLAN.md`, `docs/TELEGRAM_SETUP.md` | DEV + OPS |
 | Report delivery (future) | `docs/REPORT_DELIVERY_MODEL.md` | CONCEPT → DEV |
 | Data model | `docs/DATA_MODEL.md` | DEV |
+| Trend data collection | `docs/TREND_DATA_COLLECTION.md` | DEV |
 
 ## Limits of this approach
 

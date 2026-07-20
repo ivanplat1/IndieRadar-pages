@@ -61,7 +61,7 @@ function markdownToHtml(markdown) {
     }
 
     if (line.startsWith("# ")) {
-      blocks.push(`<h1>${escapeHtml(line.slice(2))}</h1>`);
+      blocks.push(`<h1>${formatInlineMarkdown(line.slice(2))}</h1>`);
       index += 1;
       continue;
     }

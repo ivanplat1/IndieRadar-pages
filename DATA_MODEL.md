@@ -64,6 +64,14 @@ Examples:
 
 Use this table to preserve source evidence before interpretation.
 
+### `app_market_snapshots`
+
+Append-only daily snapshots of marketplace metrics (score, version, reviews count) per app×market. Written after crawl for apps linked via `niche_apps`. Used for future trend reports; not read by the daily brief.
+
+### `niche_theme_weekly_rollups`
+
+Weekly aggregates of review theme mentions per app×market. Built by the Sunday rollup job from `source_items` (with a `signals` fallback). Used for future trend reports.
+
 ### `signals`
 
 Normalized report-ready events for a niche.

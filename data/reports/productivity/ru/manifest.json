@@ -9,43 +9,59 @@
       "number": 2
     },
     {
-      "name": "Opal: Screen Time Control",
+      "name": "Notion: Notes, Tasks, AI",
       "number": 3
     },
     {
-      "name": "Notion: notes, tasks, AI",
+      "name": "Tiimo: Daily To-Do List",
       "number": 4
     },
     {
-      "name": "Habit Tracker",
+      "name": "Google Keep - noter og lister",
       "number": 5
     },
     {
-      "name": "Structured - Daily Planner",
+      "name": "Google Tasks",
       "number": 6
     },
     {
-      "name": "Habitica",
+      "name": "CamScanner - PDF-skanner",
       "number": 7
     },
     {
-      "name": "Google Keep - noter og lister",
+      "name": "Opal: Screen Time Control",
       "number": 8
     },
     {
-      "name": "Flora - Green Focus",
+      "name": "Microsoft OneNote: Save Notes",
       "number": 9
     },
     {
-      "name": "Notion: Notes, Tasks, AI",
+      "name": "Notebook - Ta anteckningar",
       "number": 10
     },
     {
-      "name": "Finch: Self-Care Pet",
+      "name": "Todoist: To do list–Calendário",
       "number": 11
+    },
+    {
+      "name": "Notion: notes, tasks, AI",
+      "number": 12
+    },
+    {
+      "name": "WPS Office-PDF, Word, Sheet",
+      "number": 13
+    },
+    {
+      "name": "Microsoft To Do: Lists & Tasks",
+      "number": 14
+    },
+    {
+      "name": "Noji: Karteikarten Lernen",
+      "number": 15
     }
   ],
-  "generatedAt": "2026-07-19T10:06:40.708Z",
+  "generatedAt": "2026-07-20T14:54:36.466Z",
   "locale": "ru",
   "nicheSlug": "productivity"
 }
