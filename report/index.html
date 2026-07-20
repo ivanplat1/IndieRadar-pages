@@ -176,7 +176,7 @@
     </article>
     <footer>IndieRadar</footer>
   </main>
-  <script src="report-render.js?v=6"></script>
+  <script src="report-render.js?v=7"></script>
   <script>
     function scrollToHashFragment(behavior = "smooth") {
       const raw = window.location.hash.slice(1);
@@ -226,6 +226,24 @@
 
     function readParams() {
       const params = new URLSearchParams(window.location.search);
+      const q = params.get("q");
+
+      if (q) {
+        const parts = q.split("/").filter(Boolean);
+        const niche = parts[0] || "productivity";
+        const locale = parts[1] || "ru";
+
+        if (parts[2] === "week") {
+          return { app: null, locale, niche, period: "week" };
+        }
+
+        if (parts[2] === "app" && parts[3]) {
+          return { app: parts.slice(3).join("/"), locale, niche, period: null };
+        }
+
+        return { app: null, locale, niche, period: null };
+      }
+
       return {
         app: params.get("app"),
         locale: params.get("locale") || "ru",
@@ -239,7 +257,7 @@
       let file;
 
       if (app) {
-        file = `${niche}/${locale}/app-${encodeURIComponent(app)}.json`;
+        file = `${niche}/${locale}/app-${app}.json`;
       } else if (period === "week") {
         file = `${niche}/${locale}/weekly.json`;
       } else {
@@ -261,22 +279,25 @@
             const url = new URL(href, window.location.href);
 
             if (url.pathname.endsWith("/report/") || url.pathname.endsWith("/report/index.html")) {
-              const app = url.searchParams.get("app");
-              const period = url.searchParams.get("period");
               const next = new URL(window.location.href);
-              next.searchParams.set("niche", url.searchParams.get("niche") || niche);
-              next.searchParams.set("locale", url.searchParams.get("locale") || locale);
+              next.search = "";
 
-              if (app) {
-                next.searchParams.set("app", app);
+              const q = url.searchParams.get("q");
+              if (q) {
+                next.searchParams.set("q", q);
               } else {
-                next.searchParams.delete("app");
-              }
+                const app = url.searchParams.get("app");
+                const period = url.searchParams.get("period");
+                const linkNiche = url.searchParams.get("niche") || niche;
+                const linkLocale = url.searchParams.get("locale") || locale;
 
-              if (period === "week") {
-                next.searchParams.set("period", "week");
-              } else {
-                next.searchParams.delete("period");
+                if (app) {
+                  next.searchParams.set("q", `${linkNiche}/${linkLocale}/app/${app}`);
+                } else if (period === "week") {
+                  next.searchParams.set("q", `${linkNiche}/${linkLocale}/week`);
+                } else {
+                  next.searchParams.set("q", `${linkNiche}/${linkLocale}`);
+                }
               }
 
               if (url.hash) {
@@ -336,7 +357,7 @@
         status.hidden = false;
         content.hidden = true;
         const exampleLocale = params.locale === "en" ? "en" : "ru";
-        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Example: <code>?niche=${escapeHtml(params.niche)}&amp;locale=${escapeHtml(exampleLocale)}</code> or <code>?period=week</code></div>`;
+        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Example: <code>?q=${escapeHtml(params.niche)}/${escapeHtml(exampleLocale)}</code> or <code>?q=${escapeHtml(params.niche)}/${escapeHtml(exampleLocale)}/week</code></div>`;
       }
     }
 
