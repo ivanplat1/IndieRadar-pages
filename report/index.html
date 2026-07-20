@@ -229,13 +229,23 @@
       return {
         app: params.get("app"),
         locale: params.get("locale") || "ru",
-        niche: params.get("niche") || "productivity"
+        niche: params.get("niche") || "productivity",
+        period: params.get("period")
       };
     }
 
-    function buildDataUrl({ niche, locale, app }) {
+    function buildDataUrl({ niche, locale, app, period }) {
       const repoRoot = new URL("../data/reports/", window.location.href);
-      const file = app ? `${niche}/${locale}/app-${app}.json` : `${niche}/${locale}/daily.json`;
+      let file;
+
+      if (app) {
+        file = `${niche}/${locale}/app-${encodeURIComponent(app)}.json`;
+      } else if (period === "week") {
+        file = `${niche}/${locale}/weekly.json`;
+      } else {
+        file = `${niche}/${locale}/daily.json`;
+      }
+
       return new URL(file, repoRoot).toString();
     }
 
@@ -252,6 +262,7 @@
 
             if (url.pathname.endsWith("/report/") || url.pathname.endsWith("/report/index.html")) {
               const app = url.searchParams.get("app");
+              const period = url.searchParams.get("period");
               const next = new URL(window.location.href);
               next.searchParams.set("niche", url.searchParams.get("niche") || niche);
               next.searchParams.set("locale", url.searchParams.get("locale") || locale);
@@ -260,6 +271,12 @@
                 next.searchParams.set("app", app);
               } else {
                 next.searchParams.delete("app");
+              }
+
+              if (period === "week") {
+                next.searchParams.set("period", "week");
+              } else {
+                next.searchParams.delete("period");
               }
 
               if (url.hash) {
@@ -301,12 +318,16 @@
 
         document.title = payload.type === "app"
           ? `${payload.appName || "App"} · IndieRadar`
-          : `IndieRadar · ${params.niche}`;
+          : payload.type === "weekly"
+            ? `IndieRadar · ${params.niche} · week`
+            : `IndieRadar · ${params.niche}`;
+
+        const periodLabel = payload.type === "weekly" ? " · week" : "";
 
         status.hidden = true;
         content.hidden = false;
         content.innerHTML = [
-          `<div class="meta">${escapeHtml(params.niche)} · ${escapeHtml(params.locale)}${generatedAt ? ` · ${escapeHtml(generatedAt)}` : ""}</div>`,
+          `<div class="meta">${escapeHtml(params.niche)} · ${escapeHtml(params.locale)}${periodLabel}${generatedAt ? ` · ${escapeHtml(generatedAt)}` : ""}</div>`,
           markdownToHtml(markdown)
         ].join("\n");
         bindInPageNavigation(content);
@@ -315,7 +336,7 @@
         status.hidden = false;
         content.hidden = true;
         const exampleLocale = params.locale === "en" ? "en" : "ru";
-        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Example: <code>?niche=${escapeHtml(params.niche)}&amp;locale=${escapeHtml(exampleLocale)}&amp;app=1</code></div>`;
+        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Example: <code>?niche=${escapeHtml(params.niche)}&amp;locale=${escapeHtml(exampleLocale)}</code> or <code>?period=week</code></div>`;
       }
     }
 

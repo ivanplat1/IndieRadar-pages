@@ -19,6 +19,7 @@ TELEGRAM_BOT_TOKEN=
 TELEGRAM_ADMIN_CHAT_ID=
 TELEGRAM_BETA_OPEN=0
 TELEGRAM_BETA_ALLOWLIST=
+TELEGRAM_BETA_NICHES=productivity,habit-tracker,finance,ai-chat,fitness
 ```
 
 | Variable | Purpose |
@@ -27,6 +28,7 @@ TELEGRAM_BETA_ALLOWLIST=
 | `TELEGRAM_ADMIN_CHAT_ID` | Admin / superuser chat id (always allowed) |
 | `TELEGRAM_BETA_OPEN` | `1` / `true` — anyone can `/start`; otherwise closed beta |
 | `TELEGRAM_BETA_ALLOWLIST` | Comma-separated chat ids allowed when beta is closed |
+| `TELEGRAM_BETA_NICHES` | Optional comma-separated niche slugs for `/start` buttons |
 
 GitHub Actions nightly/weekly push needs `TELEGRAM_BOT_TOKEN` + `TELEGRAM_ADMIN_CHAT_ID` (admin fallback if the subscribers table is empty). Beta gate env vars are only required for local polling.
 
@@ -62,13 +64,17 @@ Use your own id as `TELEGRAM_ADMIN_CHAT_ID`. Add beta testers to `TELEGRAM_BETA_
 ## Beta user onboarding
 
 1. User opens [@IndieRadarBot](https://t.me/IndieRadarBot) (must be allowed if beta is closed).
-2. `/start` — welcome + instructions.
-3. `/setniche productivity` — save niche (validated against `niches.slug`).
-4. `/setlocale ru` or `/setlocale en` — save language → «Вы подключены к beta».
-5. `/settings` — niche, locale, push on/off.
-6. `/pause` / `/resume` — disable / enable nightly + weekly push.
-7. `/report` — daily compact brief (saved niche/locale by default).
-8. `/week` — weekly summary for the last 7 days.
+2. `/start` — language picker (RU/EN buttons). Picker UI language follows Telegram `language_code` (`ru/be/kk/ky/uz` → Russian UI; otherwise English).
+3. Tap brief language → niche picker (buttons; copy in the chosen brief language).
+4. Tap niche → «Подключено» / «You're connected» + hint `/report`.
+5. Returning `/start` shows status + change buttons + settings.
+6. `/settings` — interactive panel: niche, language, push on/off, daily/weekly brief.
+7. Power users can still use `/setniche`, `/setlocale`, `/niches`.
+8. `/pause` / `/resume` — disable / enable nightly + weekly push (also via settings buttons).
+9. `/report` — daily compact brief (saved niche/locale by default).
+10. `/week` — weekly summary for the last 7 days.
+
+Optional env `TELEGRAM_BETA_NICHES=productivity,finance,...` filters which niches appear as buttons (default: all five crawl niches).
 
 Admin (`TELEGRAM_ADMIN_CHAT_ID`) is always allowed and can onboard like any other subscriber.
 
@@ -81,16 +87,30 @@ Admin (`TELEGRAM_ADMIN_CHAT_ID`) is always allowed and can onboard like any othe
 npm run dev:telegram
 
 # In Telegram:
-/start
-/niches
-/setniche productivity
-/setlocale ru
+/start          # language → niche buttons
+/niche          # сменить нишу кнопками
+/locale         # сменить язык кнопками
 /settings
 /report
 /week
 /pause
 /resume
+
+# Power-user overrides:
+/niches
+/setniche productivity
+/setlocale en
 ```
+
+### Manual test checklist
+
+1. В `.env`: `TELEGRAM_BETA_OPEN=1` (или свой chat_id в allowlist).
+2. `npm run dev:telegram`
+3. В Telegram: `/start` → выбрать язык → выбрать нишу → увидеть «Подключено».
+4. `/report` — brief по выбранной нише.
+5. `/niche` → другая ниша → `/settings` и `/report` отражают смену.
+6. `/locale` → другой язык → `/report` на новом языке.
+7. Повторный `/start` → статус + кнопки «Сменить нишу/язык».
 
 Preview weekly text without Telegram:
 
@@ -158,11 +178,13 @@ npm run push:telegram
 
 | Command | Behavior |
 |---|---|
-| `/start` | Welcome / status |
+| `/start` | Language → niche buttons (or status + change buttons) |
+| `/niche` | Niche picker buttons (смена ниши) |
+| `/locale` | Language picker buttons |
 | `/niches` | List niches |
-| `/setniche <slug>` | Save niche |
-| `/setlocale ru\|en` | Save locale |
-| `/settings` | Show prefs + push flag |
+| `/setniche <slug>` | Save niche (power user) |
+| `/setlocale ru\|en` | Save locale (power user) |
+| `/settings` | Interactive panel (niche / language / push / briefs) |
 | `/pause` / `/resume` | Toggle nightly + weekly push |
 | `/report` | Compact daily brief (saved niche/locale, else productivity/ru) |
 | `/report <niche> full` | Full brief by sections |

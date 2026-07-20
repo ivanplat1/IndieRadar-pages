@@ -1,87 +1,107 @@
 {
   "apps": [
     {
-      "name": "Sea Soul: AI Chat",
+      "id": "3543de91-2f39-49ae-9ca9-577fe6d23e2b",
+      "name": "Replika: My AI Friend",
       "number": 1
     },
     {
-      "name": "Replika: Mi Amigo de IA",
+      "id": "0f547132-b921-43a0-867a-343156138686",
+      "name": "Sea Soul: AI Chat",
       "number": 2
     },
     {
+      "id": "e97f87d9-f5af-472b-bf5c-142df5def828",
       "name": "Chai: Chat AI Platform",
       "number": 3
     },
     {
-      "name": "PolyBuzz -Talk to AI Character",
+      "id": "e6ca2685-eccb-4af9-8d34-838c2a9df0ba",
+      "name": "PolyBuzz: Chat with AI Friends",
       "number": 4
     },
     {
-      "name": "HiWaifu: amico AI e Waifu Hub",
+      "id": "477e101d-0444-4461-ba22-a51adfdd9b63",
+      "name": "HiWaifu: AI Friend & Waifu Hub",
       "number": 5
     },
     {
-      "name": "Cycle AI: Chat & Amis IA",
+      "id": "7e627737-df61-4caa-b62e-dc7d56c3c075",
+      "name": "Cycle AI: Chat & AI Friends",
       "number": 6
     },
     {
-      "name": "Flipped:Chat with AI Character",
+      "id": "9adb314b-4fed-44fd-895b-672752137756",
+      "name": "Rosytalk - RP AI-personage",
       "number": 7
     },
     {
-      "name": "Rosytalk: Chat Personaggi AI",
+      "id": "86ce7cb7-3286-4ad9-8e9e-4bccc6f10669",
+      "name": "Flipped:Chat with AI Character",
       "number": 8
     },
     {
-      "name": "Dootchi: Chat avec persos IA",
+      "id": "b3c23331-b0d4-41b5-92a0-744a67e11a56",
+      "name": "Dootchi: Chat with AI Chars",
       "number": 9
     },
     {
-      "name": "Talkie: Creative AI Community",
+      "id": "9bdefb9c-aa07-4730-afa9-20300966ceb7",
+      "name": "Kindroid: Your Personal AI",
       "number": 10
     },
     {
-      "name": "Poe - Chat IA rapida",
+      "id": "6ff35f78-2a91-41b9-8a1d-dd92a1cfbaf7",
+      "name": "Talkie: Creative AI Community",
       "number": 11
     },
     {
-      "name": "Kindroid: Your Personal AI",
+      "id": "c4a34a75-75c7-43dd-b585-eac634738389",
+      "name": "Poe - Fast AI Chat",
       "number": 12
     },
     {
+      "id": "e7d1fa91-f8d9-4c4b-bc5a-5acbdbc0673a",
       "name": "Character AI: Chat, Talk, Text",
       "number": 13
     },
     {
-      "name": "Saylo: Chat IA, Anime e Manga",
+      "id": "0bd508f6-b5ad-4590-af17-56917079b5ed",
+      "name": "Saylo: Your AI Creative World",
       "number": 14
     },
     {
-      "name": "Linky AI: Chat, Gioco, Unione",
+      "id": "e57d3b05-2e9a-4ecf-a86f-f43d6d3d1c74",
+      "name": "Linky AI: Chat, Play, Connect",
       "number": 15
     },
     {
+      "id": "941daa7f-22a9-4344-9974-4327aa0852bc",
       "name": "Fantasia: Character AI Chat",
       "number": 16
     },
     {
+      "id": "1c366a3e-1f1a-4843-a233-ff2be07c39b0",
       "name": "Emochi: Chat With Character",
       "number": 17
     },
     {
-      "name": "Google Chat",
+      "id": "aea1bdde-fe81-4ceb-92b8-6fa35f20a293",
+      "name": "Telegram",
       "number": 18
     },
     {
-      "name": "Discord – Juega y pasa el rato",
+      "id": "07d07535-edc1-4d77-ae1a-b0148cfa5eb9",
+      "name": "Google Chat",
       "number": 19
     },
     {
-      "name": "Telegram",
+      "id": "87649601-9f8c-460d-87fc-0e5ff376adfb",
+      "name": "Tipsy Chat: Live Your Story",
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T16:54:22.746Z",
+  "generatedAt": "2026-07-20T17:26:30.364Z",
   "locale": "en",
   "nicheSlug": "ai-chat"
 }

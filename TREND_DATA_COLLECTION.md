@@ -47,10 +47,19 @@ Rollup logic:
 
 ## Optional one-time backfill
 
-Not part of nightly GHA:
+Prefer GitHub Actions (does not depend on a local machine):
+
+1. Actions → **Trend Backfill All Niches** → Run workflow  
+   — niches run **one after another**, each as its own job with a **6h** timeout  
+2. Or one niche: Actions → **Trend Backfill Crawl** → pick niche → Run workflow
+3. Logs uploaded as artifacts per niche
+
+`Daily Crawl` and both backfill workflows share concurrency group `indieradar-store-crawl`: they **queue**, never overlap (no race on Supabase / store scrapes). Telegram / weekly rollup are separate and unaffected.
+
+Local equivalent:
 
 ```bash
-npm run crawl:trends-backfill
+CRAWLER_NICHE_SLUGS=productivity npm run crawl:trends-backfill
 ```
 
 Defaults: `CRAWLER_REVIEW_MAX_AGE_DAYS=180`, `CRAWLER_REVIEW_FETCH_HOURS=8760`. Then writes today's snapshots and a rollup for the current ISO week.

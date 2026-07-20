@@ -1,87 +1,107 @@
 {
   "apps": [
     {
+      "id": "f848c3aa-7ac4-4fd5-95f3-4d80f9782235",
       "name": "Forest: Focus for Productivity",
       "number": 1
     },
     {
+      "id": "e84470be-9bee-40f4-abcb-95ca3a669f53",
       "name": "Google Calendar",
       "number": 2
     },
     {
-      "name": "Notion: Notes, Tasks, AI",
+      "id": "22fe0406-e691-47b5-9fd6-bc567be23108",
+      "name": "Notion: Notas, tareas e IA",
       "number": 3
     },
     {
+      "id": "a484a319-8242-4db0-8e8d-58daa5c4c289",
       "name": "Tiimo: Daily To Do List",
       "number": 4
     },
     {
-      "name": "Google Keep - Notes and lists",
+      "id": "6f5237c9-71d4-437d-82e1-131305659ae3",
+      "name": "Google Keep: note ed elenchi",
       "number": 5
     },
     {
-      "name": "Google Tasks",
+      "id": "11fbad73-728f-4280-b747-b8e0c39b1317",
+      "name": "CamScanner - Escáner de PDF",
       "number": 6
     },
     {
-      "name": "CamScanner - PDF-Scanner-App",
+      "id": "32a379c1-4381-4f2b-8f45-b25826d980a2",
+      "name": "Opal: Screen Time Control",
       "number": 7
     },
     {
-      "name": "Opal: Screen Time Control",
+      "id": "b6c69722-0637-4817-8438-c97e3e4e1872",
+      "name": "Google Tasks",
       "number": 8
     },
     {
-      "name": "Todoist: To Do List & Calendar",
+      "id": "24d01c9a-2660-410f-9219-7cc462e83735",
+      "name": "Microsoft OneNote: Save Notes",
       "number": 9
     },
     {
-      "name": "Microsoft OneNote: Save Notes",
+      "id": "b6d9c50d-f8e6-4601-9949-0ecb4aa0c1a1",
+      "name": "Microsoft To Do: Lists & Tasks",
       "number": 10
     },
     {
-      "name": "Microsoft To Do: Lists & Tasks",
+      "id": "74d2cdd3-e2ff-40fd-9107-9d061a2aa4aa",
+      "name": "Todoist: To do list—Calendario",
       "number": 11
     },
     {
-      "name": "Notion: notes, tasks, AI",
+      "id": "260a6071-6db1-4ef4-8f54-72f70369dbf5",
+      "name": "Notebook – notas, apuntes, IA",
       "number": 12
     },
     {
-      "name": "WPS Office-PDF,Word,Sheet,PPT",
+      "id": "92cd5e1a-c78f-43c8-9f08-de608c1abca5",
+      "name": "Notion: notes, tasks, AI",
       "number": 13
     },
     {
-      "name": "Habit Tracker",
+      "id": "57603e0c-4db5-42a2-a645-6c0cafec265a",
+      "name": "WPS Office-PDF, Word, Sheet",
       "number": 14
     },
     {
-      "name": "Notebook – Notes, Tasks, AI",
+      "id": "96cca22d-6ab9-4467-8d06-e5aa9c09af1d",
+      "name": "Habit Tracker",
       "number": 15
     },
     {
-      "name": "Any.do - Aufgaben + Kalender",
+      "id": "95278319-c1d5-41da-8de6-621be0f92bcd",
+      "name": "Any.do - Tareas + Calendario",
       "number": 16
     },
     {
+      "id": "3219790d-1fae-442f-a00e-69da7f3054bb",
       "name": "Noji: Karteikarten Lernen",
       "number": 17
     },
     {
+      "id": "07682690-aeb7-417d-bf47-cf4f66d31037",
       "name": "Flora - Green Focus",
       "number": 18
     },
     {
+      "id": "5ee51211-f93a-432b-b2c2-2e050746c7d7",
       "name": "Habitica",
       "number": 19
     },
     {
+      "id": "9ca5ba26-5c81-4952-b106-bd24e649cb1e",
       "name": "Motivation - Daily quotes",
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T16:53:43.344Z",
+  "generatedAt": "2026-07-20T17:26:53.454Z",
   "locale": "en",
   "nicheSlug": "productivity"
 }
