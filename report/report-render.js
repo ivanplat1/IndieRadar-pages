@@ -34,8 +34,9 @@ function parseMarkdownHeading(line, level) {
 function renderHeading(level, titlePart, anchor) {
   const tag = `h${level}`;
   const id = escapeHtml(anchor ?? slugifyAnchor(titlePart.replace(/\*\*/g, "")));
+  const extraClass = level === 3 && anchor?.startsWith("review-app-") ? ' class="app-review-heading"' : "";
 
-  return `<${tag} id="${id}">${formatInlineMarkdown(titlePart)}</${tag}>`;
+  return `<${tag} id="${id}"${extraClass}>${formatInlineMarkdown(titlePart)}</${tag}>`;
 }
 
 function formatInlineMarkdown(line) {
@@ -88,6 +89,12 @@ function markdownToHtml(markdown) {
     const line = lines[index].trimEnd();
 
     if (!line.trim()) {
+      index += 1;
+      continue;
+    }
+
+    if (/^-{3,}$/.test(line.trim())) {
+      blocks.push('<hr class="app-divider">');
       index += 1;
       continue;
     }
@@ -146,10 +153,10 @@ function markdownToHtml(markdown) {
 
     if (indent > 0) {
       const className = isNoteLabel(content)
-        ? "note-label"
+        ? `note-label indent-${Math.min(indent, 4)}`
         : /^\d+\.\s/.test(content)
-          ? "review-quote"
-          : `indent-${indent}`;
+          ? `review-quote indent-${Math.min(indent, 4)}`
+          : `indent-${Math.min(indent, 4)}`;
 
       blocks.push(`<p class="${className}">${formatInlineMarkdown(content.replace(/^\d+\.\s/, ""))}</p>`);
       index += 1;

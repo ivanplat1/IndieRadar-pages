@@ -68,6 +68,19 @@
       font-weight: 700;
       scroll-margin-top: 16px;
     }
+    h3.app-review-heading {
+      margin: 20px 0 12px;
+      font-size: 1.06rem;
+      color: var(--text);
+    }
+    hr.app-divider {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 32px 0 4px;
+    }
+    hr.app-divider + h3.app-review-heading {
+      margin-top: 0;
+    }
     h2#toc + ul,
     h2#toc + p + ul,
     h2#toc ~ ul:first-of-type {
@@ -99,24 +112,35 @@
       margin-bottom: 10px;
     }
     li.indent-1, p.indent-1 {
-      margin-left: 0.5rem;
+      margin-left: 0.75rem;
     }
     li.indent-2, p.indent-2 {
-      margin-left: 1rem;
+      margin-left: 1.5rem;
       color: var(--muted);
     }
     p.indent-3, li.indent-3 {
-      margin-left: 1.5rem;
+      margin-left: 2.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    p.indent-4, li.indent-4 {
+      margin-left: 3rem;
       color: var(--muted);
       font-size: 0.95rem;
     }
     p.note-label {
       margin-top: 12px;
+      margin-bottom: 6px;
       font-weight: 700;
       color: var(--text);
     }
+    p.note-label.indent-3 {
+      margin-left: 2.25rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
     p.review-quote {
-      margin: 8px 0 8px 1rem;
+      margin: 8px 0 8px 3rem;
       padding: 10px 12px;
       border-left: 3px solid var(--link);
       background: color-mix(in srgb, var(--accent) 70%, var(--card));
@@ -152,7 +176,7 @@
     </article>
     <footer>IndieRadar</footer>
   </main>
-  <script src="report-render.js?v=5"></script>
+  <script src="report-render.js?v=6"></script>
   <script>
     function scrollToHashFragment(behavior = "smooth") {
       const raw = window.location.hash.slice(1);
