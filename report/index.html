@@ -314,7 +314,8 @@
       } catch (error) {
         status.hidden = false;
         content.hidden = true;
-        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Пример: <code>?niche=productivity&amp;locale=ru&amp;app=1</code></div>`;
+        const exampleLocale = params.locale === "en" ? "en" : "ru";
+        status.innerHTML = `<div class="error">${escapeHtml(error instanceof Error ? error.message : "Unable to load report.")}<br><br>Example: <code>?niche=${escapeHtml(params.niche)}&amp;locale=${escapeHtml(exampleLocale)}&amp;app=1</code></div>`;
       }
     }
 

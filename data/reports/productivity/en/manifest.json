@@ -1,0 +1,87 @@
+{
+  "apps": [
+    {
+      "name": "Forest: Focus for Productivity",
+      "number": 1
+    },
+    {
+      "name": "Google Calendar",
+      "number": 2
+    },
+    {
+      "name": "Notion: Notes, Tasks, AI",
+      "number": 3
+    },
+    {
+      "name": "Tiimo: Daily To Do List",
+      "number": 4
+    },
+    {
+      "name": "Google Keep - Notes and lists",
+      "number": 5
+    },
+    {
+      "name": "Google Tasks",
+      "number": 6
+    },
+    {
+      "name": "CamScanner - PDF-Scanner-App",
+      "number": 7
+    },
+    {
+      "name": "Opal: Screen Time Control",
+      "number": 8
+    },
+    {
+      "name": "Todoist: To Do List & Calendar",
+      "number": 9
+    },
+    {
+      "name": "Microsoft OneNote: Save Notes",
+      "number": 10
+    },
+    {
+      "name": "Microsoft To Do: Lists & Tasks",
+      "number": 11
+    },
+    {
+      "name": "Notion: notes, tasks, AI",
+      "number": 12
+    },
+    {
+      "name": "WPS Office-PDF,Word,Sheet,PPT",
+      "number": 13
+    },
+    {
+      "name": "Habit Tracker",
+      "number": 14
+    },
+    {
+      "name": "Notebook – Notes, Tasks, AI",
+      "number": 15
+    },
+    {
+      "name": "Any.do - Aufgaben + Kalender",
+      "number": 16
+    },
+    {
+      "name": "Noji: Karteikarten Lernen",
+      "number": 17
+    },
+    {
+      "name": "Flora - Green Focus",
+      "number": 18
+    },
+    {
+      "name": "Habitica",
+      "number": 19
+    },
+    {
+      "name": "Motivation - Daily quotes",
+      "number": 20
+    }
+  ],
+  "generatedAt": "2026-07-20T16:53:43.344Z",
+  "locale": "en",
+  "nicheSlug": "productivity"
+}

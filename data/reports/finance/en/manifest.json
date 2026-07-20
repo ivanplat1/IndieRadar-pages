@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "Revolut: Spend, Save, Trade",
+      "number": 1
+    },
+    {
+      "name": "Google Wallet",
+      "number": 2
+    }
+  ],
+  "generatedAt": "2026-07-20T16:54:17.352Z",
+  "locale": "en",
+  "nicheSlug": "finance"
+}

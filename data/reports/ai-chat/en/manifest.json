@@ -1,0 +1,87 @@
+{
+  "apps": [
+    {
+      "name": "Sea Soul: AI Chat",
+      "number": 1
+    },
+    {
+      "name": "Replika: Mi Amigo de IA",
+      "number": 2
+    },
+    {
+      "name": "Chai: Chat AI Platform",
+      "number": 3
+    },
+    {
+      "name": "PolyBuzz -Talk to AI Character",
+      "number": 4
+    },
+    {
+      "name": "HiWaifu: amico AI e Waifu Hub",
+      "number": 5
+    },
+    {
+      "name": "Cycle AI: Chat & Amis IA",
+      "number": 6
+    },
+    {
+      "name": "Flipped:Chat with AI Character",
+      "number": 7
+    },
+    {
+      "name": "Rosytalk: Chat Personaggi AI",
+      "number": 8
+    },
+    {
+      "name": "Dootchi: Chat avec persos IA",
+      "number": 9
+    },
+    {
+      "name": "Talkie: Creative AI Community",
+      "number": 10
+    },
+    {
+      "name": "Poe - Chat IA rapida",
+      "number": 11
+    },
+    {
+      "name": "Kindroid: Your Personal AI",
+      "number": 12
+    },
+    {
+      "name": "Character AI: Chat, Talk, Text",
+      "number": 13
+    },
+    {
+      "name": "Saylo: Chat IA, Anime e Manga",
+      "number": 14
+    },
+    {
+      "name": "Linky AI: Chat, Gioco, Unione",
+      "number": 15
+    },
+    {
+      "name": "Fantasia: Character AI Chat",
+      "number": 16
+    },
+    {
+      "name": "Emochi: Chat With Character",
+      "number": 17
+    },
+    {
+      "name": "Google Chat",
+      "number": 18
+    },
+    {
+      "name": "Discord – Juega y pasa el rato",
+      "number": 19
+    },
+    {
+      "name": "Telegram",
+      "number": 20
+    }
+  ],
+  "generatedAt": "2026-07-20T16:54:22.746Z",
+  "locale": "en",
+  "nicheSlug": "ai-chat"
+}
