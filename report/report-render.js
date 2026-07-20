@@ -6,6 +6,38 @@ function escapeHtml(value) {
     .replaceAll("\"", "&quot;");
 }
 
+function slugifyAnchor(value) {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80) || "section";
+}
+
+function parseMarkdownHeading(line, level) {
+  const prefix = `${"#".repeat(level)} `;
+
+  if (!line.startsWith(prefix)) {
+    return null;
+  }
+
+  const raw = line.slice(prefix.length);
+  const anchorMatch = raw.match(/\s*\{#([a-z0-9_-]+)\}\s*$/i);
+  const anchor = anchorMatch?.[1] ?? null;
+  const titlePart = anchor ? raw.replace(/\s*\{#[^}]+\}\s*$/, "") : raw;
+
+  return { anchor, titlePart };
+}
+
+function renderHeading(level, titlePart, anchor) {
+  const tag = `h${level}`;
+  const id = escapeHtml(anchor ?? slugifyAnchor(titlePart.replace(/\*\*/g, "")));
+
+  return `<${tag} id="${id}">${formatInlineMarkdown(titlePart)}</${tag}>`;
+}
+
 function formatInlineMarkdown(line) {
   let formatted = escapeHtml(line);
 
@@ -61,13 +93,22 @@ function markdownToHtml(markdown) {
     }
 
     if (line.startsWith("# ")) {
-      blocks.push(`<h1>${formatInlineMarkdown(line.slice(2))}</h1>`);
+      const heading = parseMarkdownHeading(line, 1);
+      blocks.push(renderHeading(1, heading?.titlePart ?? line.slice(2), heading?.anchor ?? null));
       index += 1;
       continue;
     }
 
     if (line.startsWith("## ")) {
-      blocks.push(`<h2>${formatInlineMarkdown(line.slice(3))}</h2>`);
+      const heading = parseMarkdownHeading(line, 2);
+      blocks.push(renderHeading(2, heading?.titlePart ?? line.slice(3), heading?.anchor ?? null));
+      index += 1;
+      continue;
+    }
+
+    if (line.startsWith("### ")) {
+      const heading = parseMarkdownHeading(line, 3);
+      blocks.push(renderHeading(3, heading?.titlePart ?? line.slice(4), heading?.anchor ?? null));
       index += 1;
       continue;
     }

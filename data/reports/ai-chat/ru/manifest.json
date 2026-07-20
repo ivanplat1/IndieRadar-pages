@@ -5,23 +5,63 @@
       "number": 1
     },
     {
-      "name": "Talkie: Creative AI Community",
+      "name": "Cycle AI: Chat & AI Friends",
       "number": 2
     },
     {
-      "name": "Emochi: Chat With Character",
+      "name": "Talkie: Creative AI Community",
       "number": 3
     },
     {
-      "name": "Character AI: Chat, Talk, Text",
+      "name": "Chai: Chat AI Platform",
       "number": 4
     },
     {
-      "name": "ChatGPT",
+      "name": "Dootchi: Chat with AI Chars",
       "number": 5
+    },
+    {
+      "name": "HiWaifu: AI Friend & Waifu Hub",
+      "number": 6
+    },
+    {
+      "name": "Rosytalk: AI Character Chat",
+      "number": 7
+    },
+    {
+      "name": "Flipped:Chat with AI Character",
+      "number": 8
+    },
+    {
+      "name": "Poe - Fast AI Chat",
+      "number": 9
+    },
+    {
+      "name": "Saylo: Your AI Creative World",
+      "number": 10
+    },
+    {
+      "name": "Linky AI: Chat, Play, Connect",
+      "number": 11
+    },
+    {
+      "name": "Fantasia: Character AI Chat",
+      "number": 12
+    },
+    {
+      "name": "Emochi: Chat With Character",
+      "number": 13
+    },
+    {
+      "name": "Character AI: Chat, Talk, Text",
+      "number": 14
+    },
+    {
+      "name": "Google Chat",
+      "number": 15
     }
   ],
-  "generatedAt": "2026-07-20T14:59:21.351Z",
+  "generatedAt": "2026-07-20T15:12:48.469Z",
   "locale": "ru",
   "nicheSlug": "ai-chat"
 }
