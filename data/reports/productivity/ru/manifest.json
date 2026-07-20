@@ -59,9 +59,29 @@
     {
       "name": "Noji: Karteikarten Lernen",
       "number": 15
+    },
+    {
+      "name": "Habit Tracker",
+      "number": 16
+    },
+    {
+      "name": "Flora - Green Focus",
+      "number": 17
+    },
+    {
+      "name": "Habitica",
+      "number": 18
+    },
+    {
+      "name": "Motivation - Daily quotes",
+      "number": 19
+    },
+    {
+      "name": "ChatGPT",
+      "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T15:28:27.143Z",
+  "generatedAt": "2026-07-20T16:05:09.510Z",
   "locale": "ru",
   "nicheSlug": "productivity"
 }
