@@ -152,7 +152,7 @@
     </article>
     <footer>IndieRadar</footer>
   </main>
-  <script src="report-render.js?v=3"></script>
+  <script src="report-render.js?v=4"></script>
   <script>
     function readParams() {
       const params = new URLSearchParams(window.location.search);
@@ -173,6 +173,10 @@
       return markdown.replace(
         /\[([^\]]+)\]\(([^)]+)\)/g,
         (match, label, href) => {
+          if (href.startsWith("#")) {
+            return match;
+          }
+
           try {
             const url = new URL(href, window.location.href);
 
@@ -186,6 +190,10 @@
                 next.searchParams.set("app", app);
               } else {
                 next.searchParams.delete("app");
+              }
+
+              if (url.hash) {
+                next.hash = url.hash;
               }
 
               return `[${label}](${next.toString()})`;
