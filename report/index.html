@@ -152,8 +152,54 @@
     </article>
     <footer>IndieRadar</footer>
   </main>
-  <script src="report-render.js?v=4"></script>
+  <script src="report-render.js?v=5"></script>
   <script>
+    function scrollToHashFragment(behavior = "smooth") {
+      const raw = window.location.hash.slice(1);
+
+      if (!raw) {
+        return;
+      }
+
+      const target = document.getElementById(decodeURIComponent(raw));
+
+      if (target) {
+        target.scrollIntoView({ behavior, block: "start" });
+      }
+    }
+
+    function bindInPageNavigation(container) {
+      if (container.dataset.navigationBound === "1") {
+        return;
+      }
+
+      container.dataset.navigationBound = "1";
+
+      container.addEventListener("click", (event) => {
+        const link = event.target.closest('a[href^="#"]');
+
+        if (!link || !container.contains(link)) {
+          return;
+        }
+
+        const raw = link.getAttribute("href")?.slice(1);
+
+        if (!raw) {
+          return;
+        }
+
+        const target = document.getElementById(decodeURIComponent(raw));
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${encodeURIComponent(raw)}`);
+      });
+    }
+
     function readParams() {
       const params = new URLSearchParams(window.location.search);
       return {
@@ -239,6 +285,8 @@
           `<div class="meta">${escapeHtml(params.niche)} · ${escapeHtml(params.locale)}${generatedAt ? ` · ${escapeHtml(generatedAt)}` : ""}</div>`,
           markdownToHtml(markdown)
         ].join("\n");
+        bindInPageNavigation(content);
+        requestAnimationFrame(() => scrollToHashFragment("instant"));
       } catch (error) {
         status.hidden = false;
         content.hidden = true;
@@ -246,6 +294,7 @@
       }
     }
 
+    window.addEventListener("hashchange", () => scrollToHashFragment("smooth"));
     loadReport();
   </script>
 </body>
