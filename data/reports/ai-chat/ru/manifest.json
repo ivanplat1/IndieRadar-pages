@@ -7,9 +7,21 @@
     {
       "name": "Talkie: Creative AI Community",
       "number": 2
+    },
+    {
+      "name": "Emochi: Chat With Character",
+      "number": 3
+    },
+    {
+      "name": "Character AI: Chat, Talk, Text",
+      "number": 4
+    },
+    {
+      "name": "ChatGPT",
+      "number": 5
     }
   ],
-  "generatedAt": "2026-07-20T14:55:06.941Z",
+  "generatedAt": "2026-07-20T14:59:21.351Z",
   "locale": "ru",
   "nicheSlug": "ai-chat"
 }
