@@ -6,8 +6,8 @@
       "number": 1
     },
     {
-      "id": "ff003297-11c8-40ec-8012-62e90969df01",
-      "name": "Google Agenda",
+      "id": "543a6dab-018e-4eb7-b73e-fc3e4c9ceba0",
+      "name": "Google Kalender",
       "number": 2
     },
     {
@@ -21,8 +21,8 @@
       "number": 4
     },
     {
-      "id": "1304337f-2c51-4c23-863a-71a6cb1cfeb8",
-      "name": "CamScanner - PDF-skanner",
+      "id": "333cfb91-85b5-4342-a40f-3a1900ca4ca9",
+      "name": "CamScanner - PDF-scanner app",
       "number": 5
     },
     {
@@ -76,8 +76,8 @@
       "number": 15
     },
     {
-      "id": "9a565f49-1483-4ffd-9cb2-ce1aaf9acae9",
-      "name": "Any.do - Uppgifter + Kalender",
+      "id": "dbb7f8cb-a639-4509-bd5c-dddba2a87c30",
+      "name": "Any.do - Huskeliste + Kalender",
       "number": 16
     },
     {
@@ -101,7 +101,7 @@
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T17:45:18.231Z",
+  "generatedAt": "2026-07-20T17:50:56.938Z",
   "locale": "en",
   "nicheSlug": "productivity"
 }

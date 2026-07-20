@@ -6,8 +6,8 @@
       "number": 1
     },
     {
-      "id": "ff003297-11c8-40ec-8012-62e90969df01",
-      "name": "Google Agenda",
+      "id": "543a6dab-018e-4eb7-b73e-fc3e4c9ceba0",
+      "name": "Google Kalender",
       "number": 2
     },
     {
@@ -21,23 +21,23 @@
       "number": 4
     },
     {
-      "id": "e1b5177c-d0ea-4fda-939d-34efa5a25f09",
-      "name": "Google Keep",
+      "id": "333cfb91-85b5-4342-a40f-3a1900ca4ca9",
+      "name": "CamScanner - PDF-scanner app",
       "number": 5
-    },
-    {
-      "id": "1304337f-2c51-4c23-863a-71a6cb1cfeb8",
-      "name": "CamScanner - PDF-skanner",
-      "number": 6
     },
     {
       "id": "24d01c9a-2660-410f-9219-7cc462e83735",
       "name": "Microsoft OneNote: Save Notes",
-      "number": 7
+      "number": 6
     },
     {
       "id": "32a379c1-4381-4f2b-8f45-b25826d980a2",
       "name": "Opal: Screen Time Control",
+      "number": 7
+    },
+    {
+      "id": "14cb75cd-9326-4f10-99c3-b7333d49bc05",
+      "name": "Google Keep – anteckn. & lista",
       "number": 8
     },
     {
@@ -76,8 +76,8 @@
       "number": 15
     },
     {
-      "id": "9a565f49-1483-4ffd-9cb2-ce1aaf9acae9",
-      "name": "Any.do - Uppgifter + Kalender",
+      "id": "dbb7f8cb-a639-4509-bd5c-dddba2a87c30",
+      "name": "Any.do - Huskeliste + Kalender",
       "number": 16
     },
     {
@@ -101,7 +101,7 @@
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T17:43:55.803Z",
+  "generatedAt": "2026-07-20T17:50:30.043Z",
   "locale": "ru",
   "nicheSlug": "productivity"
 }

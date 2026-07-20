@@ -26,13 +26,13 @@
       "number": 5
     },
     {
-      "id": "7e627737-df61-4caa-b62e-dc7d56c3c075",
-      "name": "Cycle AI: Chat & AI Friends",
+      "id": "2596ad47-62a0-4914-a5d4-c6651702a49f",
+      "name": "Rosytalk: AI Character Chat",
       "number": 6
     },
     {
-      "id": "234810c9-a286-48bd-a818-0b7ec47e9e46",
-      "name": "Rosytalk – RP AI-karaktär",
+      "id": "7e627737-df61-4caa-b62e-dc7d56c3c075",
+      "name": "Cycle AI: Chat & AI Friends",
       "number": 7
     },
     {
@@ -86,8 +86,8 @@
       "number": 17
     },
     {
-      "id": "9c8e5ba6-db05-48d0-bcfc-7823f8dab3a5",
-      "name": "Discord - Tal, Spil, Hæng ud",
+      "id": "17d4d7e3-39f3-4279-904c-0720e0799998",
+      "name": "Discord – juttele ja hengaile",
       "number": 18
     },
     {
@@ -101,7 +101,7 @@
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T17:44:26.577Z",
+  "generatedAt": "2026-07-20T17:51:22.162Z",
   "locale": "ru",
   "nicheSlug": "ai-chat"
 }
