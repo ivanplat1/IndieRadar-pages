@@ -1,0 +1,107 @@
+{
+  "apps": [
+    {
+      "id": "023f9fd5-f137-4e97-b594-58c8d4992915",
+      "name": "Peloton - Fitness & Workouts",
+      "number": 1
+    },
+    {
+      "id": "5335241d-1f63-4d58-b463-5aa729251631",
+      "name": "Fitbod: Rutinas Personalizadas",
+      "number": 2
+    },
+    {
+      "id": "4c6ec766-7ee2-40dc-8e30-f5809a09b8a5",
+      "name": "Strava: Løpe, Sykle, Fottur",
+      "number": 3
+    },
+    {
+      "id": "8c96733f-429a-4412-8617-dfce9931e307",
+      "name": "MyFitnessPal: Calorie Counter",
+      "number": 4
+    },
+    {
+      "id": "ef77491a-e1d5-4a55-8465-3c48dd5a0feb",
+      "name": "Lasta: Your Wellness Coach",
+      "number": 5
+    },
+    {
+      "id": "7f9c5dc6-8d9f-4a03-b79b-069e8e410b0f",
+      "name": "Google Health (Fitbit)",
+      "number": 6
+    },
+    {
+      "id": "26f65c0c-b4e8-427a-a81b-3970a31b4a2f",
+      "name": "Gymverse: Gym Workout Planner",
+      "number": 7
+    },
+    {
+      "id": "23720811-a50d-4336-8da3-20f01c2466be",
+      "name": "Hevy - Gym Log Workout Tracker",
+      "number": 8
+    },
+    {
+      "id": "a792a64d-bca9-4a96-8e5d-ace97f0e77e6",
+      "name": "ASICS Runkeeper: Fitness App",
+      "number": 9
+    },
+    {
+      "id": "3e6691ef-aefe-41ab-a549-91fecdc232c7",
+      "name": "Samsung Health",
+      "number": 10
+    },
+    {
+      "id": "1d2a32a4-23ea-4182-9652-56306d8b32b7",
+      "name": "Sweat: Fitness App For Women",
+      "number": 11
+    },
+    {
+      "id": "1cdb99c7-2b05-45c9-b072-5ddaaa732c2b",
+      "name": "Fitify: Fitness, Home Workout",
+      "number": 12
+    },
+    {
+      "id": "8ca66b3b-915e-4cc2-a308-55c3f6e7bb85",
+      "name": "Lyfta: Treningsapp for Gym",
+      "number": 13
+    },
+    {
+      "id": "a0425fa9-6104-4ecf-8b16-040f14ef909a",
+      "name": "Nike Training Club",
+      "number": 14
+    },
+    {
+      "id": "a2725937-a3c5-4911-9c9c-d1b18164b6d0",
+      "name": "Planet Fitness",
+      "number": 15
+    },
+    {
+      "id": "f43ea08b-9ae7-414c-875b-93758283485d",
+      "name": "Map My Fitness Workout Tracker",
+      "number": 16
+    },
+    {
+      "id": "640fb53c-7337-4849-bbb5-ef368096bf6b",
+      "name": "FitOn Workouts & Fitness Plans",
+      "number": 17
+    },
+    {
+      "id": "07cd8b99-01eb-497a-afe8-268f176c340d",
+      "name": "Fitness App—Muscle Gym Workout",
+      "number": 18
+    },
+    {
+      "id": "37aaabc5-7e55-47c8-ae8f-3c552459303c",
+      "name": "Asana Rebel: Get in Shape",
+      "number": 19
+    },
+    {
+      "id": "a888cbe7-05f6-41a0-9386-a3662b485667",
+      "name": "Mi Fitness (Xiaomi Wear)",
+      "number": 20
+    }
+  ],
+  "generatedAt": "2026-07-21T14:08:43.260Z",
+  "locale": "ru",
+  "nicheSlug": "fitness"
+}

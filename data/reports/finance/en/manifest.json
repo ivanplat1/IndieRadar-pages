@@ -1,15 +1,107 @@
 {
   "apps": [
     {
-      "name": "Revolut: Spend, Save, Trade",
+      "id": "6ce74bc8-3316-4693-ac8c-c82d3b0853d8",
+      "name": "Spendee: Orçamento e Gastos",
       "number": 1
     },
     {
-      "name": "Google Wallet",
+      "id": "43dca600-e3e6-43cc-898d-d71f458145ce",
+      "name": "Money Manager",
       "number": 2
+    },
+    {
+      "id": "f76e2b72-ce8e-40ae-940e-51ebed136aef",
+      "name": "Rocket Money - Bills & Budgets",
+      "number": 3
+    },
+    {
+      "id": "7818828a-9eaf-4109-9ef5-d8dcc748ee1d",
+      "name": "Fidelity Investments",
+      "number": 4
+    },
+    {
+      "id": "1f91fdb4-f7f6-4457-a630-80c0dbb972cf",
+      "name": "eToro: obchodujte a investujte",
+      "number": 5
+    },
+    {
+      "id": "d05185eb-387d-417a-ba20-d2aef0ff171c",
+      "name": "Bloomberg: Finance Market News",
+      "number": 6
+    },
+    {
+      "id": "06bbf041-f011-4d9b-8de6-6224cdbbbcb3",
+      "name": "TradingView - Bolsa de valores",
+      "number": 7
+    },
+    {
+      "id": "790c3a20-674b-41ea-bb92-e4f6e5848a05",
+      "name": "Carteira do Google",
+      "number": 8
+    },
+    {
+      "id": "410585a9-1914-4b1b-a60f-2b6830a4a486",
+      "name": "Klarna: Pagamento inteligente",
+      "number": 9
+    },
+    {
+      "id": "c1e28435-4ab1-4517-a348-dec4fea08719",
+      "name": "Acorns: Save & Invest Money",
+      "number": 10
+    },
+    {
+      "id": "764c2bd4-78c6-4102-bd5e-4c2259707c40",
+      "name": "Wallet: Budget Expense Tracker",
+      "number": 11
+    },
+    {
+      "id": "c59009c8-5b26-475a-99e1-8151c3342634",
+      "name": "Coinbase: Bitcoin & Ether",
+      "number": 12
+    },
+    {
+      "id": "c930ebd6-8835-4cfd-91f6-14024ceffba1",
+      "name": "SoFi: Bank, Investing & Crypto",
+      "number": 13
+    },
+    {
+      "id": "a3215d9a-27ba-4931-901b-4ffcb4fb778a",
+      "name": "Money Lover Controle de gastos",
+      "number": 14
+    },
+    {
+      "id": "d646ef55-f000-4857-9d90-552e0ae9b8eb",
+      "name": "Revolut — Mais do que um banco",
+      "number": 15
+    },
+    {
+      "id": "b4fa159d-c87f-41e5-8169-fef84aa535a0",
+      "name": "Trust: Crypto & Bitcoin Wallet",
+      "number": 16
+    },
+    {
+      "id": "c356775e-5b9a-4300-a474-9a9613d7ba3d",
+      "name": "Inter: Conta, Cartão e Pix",
+      "number": 17
+    },
+    {
+      "id": "64d6226b-b3f7-48eb-8f6a-50047eb2daec",
+      "name": "Moneybox - Save and Invest",
+      "number": 18
+    },
+    {
+      "id": "5faf4605-bf88-435f-b4e5-ed52ad168a57",
+      "name": "Chase Mobile®: Bank & Invest",
+      "number": 19
+    },
+    {
+      "id": "ab579887-af2f-417e-9f6d-2ffb3675290e",
+      "name": "PayPal",
+      "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T16:54:17.352Z",
+  "generatedAt": "2026-07-21T14:05:39.913Z",
   "locale": "en",
   "nicheSlug": "finance"
 }

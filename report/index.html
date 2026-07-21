@@ -176,7 +176,7 @@
     </article>
     <footer>IndieRadar</footer>
   </main>
-  <script src="report-render.js?v=7"></script>
+  <script src="report-render.js?v=8"></script>
   <script>
     function scrollToHashFragment(behavior = "smooth") {
       const raw = window.location.hash.slice(1);
@@ -264,7 +264,45 @@
         file = `${niche}/${locale}/daily.json`;
       }
 
-      return new URL(file, repoRoot).toString();
+      return new URL(file, repoRoot);
+    }
+
+    async function fetchManifest(niche, locale) {
+      const manifestUrl = buildDataUrl({ niche, locale, app: null, period: null });
+      manifestUrl.pathname = manifestUrl.pathname.replace(/daily\.json$/, "manifest.json");
+
+      const response = await fetch(manifestUrl.toString(), { cache: "no-store" });
+
+      if (!response.ok) {
+        return null;
+      }
+
+      return response.json();
+    }
+
+    async function fetchReportPayload(params) {
+      const primaryUrl = buildDataUrl(params);
+      let response = await fetch(primaryUrl.toString(), { cache: "no-store" });
+
+      if (response.ok) {
+        return response.json();
+      }
+
+      if (params.app && response.status === 404) {
+        const manifest = await fetchManifest(params.niche, params.locale);
+        const entry = manifest?.apps?.find((item) => item.id === params.app);
+
+        if (entry?.number) {
+          const legacyUrl = buildDataUrl({ ...params, app: String(entry.number) });
+          response = await fetch(legacyUrl.toString(), { cache: "no-store" });
+
+          if (response.ok) {
+            return response.json();
+          }
+        }
+      }
+
+      throw new Error(`Report data not found (${response.status}).`);
     }
 
     function rewriteReportLinks(markdown, { niche, locale }) {
@@ -319,19 +357,12 @@
       const status = document.getElementById("status");
       const content = document.getElementById("content");
       const params = readParams();
-      const dataUrl = buildDataUrl(params);
 
       status.textContent = "Загрузка…";
       content.hidden = true;
 
       try {
-        const response = await fetch(dataUrl, { cache: "no-store" });
-
-        if (!response.ok) {
-          throw new Error(`Report data not found (${response.status}).`);
-        }
-
-        const payload = await response.json();
+        const payload = await fetchReportPayload(params);
         const markdown = rewriteReportLinks(payload.markdown || "", params);
         const generatedAt = payload.generatedAt
           ? new Date(payload.generatedAt).toLocaleString(params.locale === "ru" ? "ru-RU" : "en-US")

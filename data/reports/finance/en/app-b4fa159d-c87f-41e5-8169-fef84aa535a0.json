@@ -1,0 +1,10 @@
+{
+  "appId": "b4fa159d-c87f-41e5-8169-fef84aa535a0",
+  "appIndex": 16,
+  "appName": "Trust: Crypto & Bitcoin Wallet",
+  "generatedAt": "2026-07-21T14:05:39.913Z",
+  "locale": "en",
+  "markdown": "# Trust: Crypto & Bitcoin Wallet · Finance\n\nGenerated: Jul 21, 2026, 7:05 PM\n\n## **Contents** {#toc}\n\n- [Bugs and stability](#theme-bugs_stability)\n\n\n## **Bugs and stability** {#theme-bugs_stability}\n\n   **Bugs and stability.**\n      2 recent review(s) mention bugs and stability.\n      Review window: Apr 20, 2026 - Jul 19, 2026\n      **Why it matters:** Users report reliability problems. This points to quality gaps competitors can exploit.\n\n         **Review examples:**\n            1. _Tidus Baey_, Jul 19, 2026, 1/5: \"never use this wallet it function is broken. I swap tron usdt and all my 20usdt is gone. Never use this wallet is likely scam\"\n            2. _Herr M._, Jul 18, 2026, 1/5: \"Since the last update, some coins are no longer being displayed and cannot be used, even though the transaction IDs confirm that the transfers to the wallet were successful. The internal AI correctly identifies the balance, yet the app itself fails to show it. Manual addition, restarting the app, and other standard troubleshooting steps have not resolved the issue. I even cleared the cache and reimported the wallets. No success. The coins are not showing up. This is really, really bad.\"\n            3. _Paweł Pelikan_, Jul 13, 2026, 1/5: \"Wallet shows a wrong token amount in view-only wallets (ERC-20 tokens). I am forced to check block explorers to see correct amount. There is no support for swiping private keys on ETH and similar networks. In the new version of the app there is huge amount of bugs. App has a lot of spam and unreliable features.\"",
+  "nicheSlug": "finance",
+  "type": "app"
+}

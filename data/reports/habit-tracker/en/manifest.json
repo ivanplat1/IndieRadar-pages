@@ -1,11 +1,107 @@
 {
   "apps": [
     {
-      "name": "Loop Habit Tracker",
+      "id": "f848c3aa-7ac4-4fd5-95f3-4d80f9782235",
+      "name": "Forest: Focus for Productivity",
       "number": 1
+    },
+    {
+      "id": "9d802231-58eb-4a45-aa89-3ced7bb76b9e",
+      "name": "Habit Rabbit: Habit Tracker",
+      "number": 2
+    },
+    {
+      "id": "6d4793b8-769a-4a38-9e61-ccda1c906f2f",
+      "name": "Way of Life - Habit Tracker",
+      "number": 3
+    },
+    {
+      "id": "b73ccd09-ee48-4764-ac77-4f09d0e7fa84",
+      "name": "Habit Tracker - Hábitos",
+      "number": 4
+    },
+    {
+      "id": "661356d0-48a9-4d04-a931-ac2e9e6d3cb0",
+      "name": "Habitify: Habit Tracker",
+      "number": 5
+    },
+    {
+      "id": "5ee51211-f93a-432b-b2c2-2e050746c7d7",
+      "name": "Habitica",
+      "number": 6
+    },
+    {
+      "id": "a871684c-de17-4231-b571-53c71c488fa0",
+      "name": "Atoms - from Atomic Habits",
+      "number": 7
+    },
+    {
+      "id": "860d47e3-91fb-41a2-a762-b6785b207899",
+      "name": "Finch: Self-Care Pet",
+      "number": 8
+    },
+    {
+      "id": "8abfc268-acfd-41b8-a937-0c315f34a8db",
+      "name": "(Not Boring) Habits",
+      "number": 9
+    },
+    {
+      "id": "451af485-4e57-456a-b0bc-61d948f71749",
+      "name": "Habit Tracker - HabitKit",
+      "number": 10
+    },
+    {
+      "id": "ef6da155-414e-4acf-9688-dabb0ae37bc1",
+      "name": "Habitify — Hábitos & Rotina",
+      "number": 11
+    },
+    {
+      "id": "82b7ccb7-78b8-4d19-bbb0-0e3531f76240",
+      "name": "Grit: Habits, Routines, Goals",
+      "number": 12
+    },
+    {
+      "id": "82feb9b3-fe0f-412a-af1c-2600f74f1081",
+      "name": "ShineDay - Habit Tracker",
+      "number": 13
+    },
+    {
+      "id": "6372db7a-3afb-4a70-a1eb-d33f8df63f82",
+      "name": "I Am Sober",
+      "number": 14
+    },
+    {
+      "id": "93ab32c5-d7fe-456f-8ce1-b08253e2e817",
+      "name": "Rise Habit Tracker",
+      "number": 15
+    },
+    {
+      "id": "8d0db62d-825c-476c-8b95-53898c23e6ef",
+      "name": "Gewohnheiten, To-Dos: HabitJar",
+      "number": 16
+    },
+    {
+      "id": "8c53e476-991d-40d3-a6c9-3f85d72c0334",
+      "name": "Habit Tracker - HabitGenius",
+      "number": 17
+    },
+    {
+      "id": "51f02bd9-18ae-46a1-a06b-cd89d20c2e80",
+      "name": "Habit Tracker - To-Do List",
+      "number": 18
+    },
+    {
+      "id": "feb6c379-d6fa-449c-a6c6-b9aa9a863e9f",
+      "name": "Habit Tracker: Abletobe",
+      "number": 19
+    },
+    {
+      "id": "f4569d0c-357f-49cd-833b-6ca49a4dd54a",
+      "name": "Habit Pixel: Rastreador",
+      "number": 20
     }
   ],
-  "generatedAt": "2026-07-20T16:54:14.735Z",
+  "generatedAt": "2026-07-21T14:07:18.444Z",
   "locale": "en",
   "nicheSlug": "habit-tracker"
 }

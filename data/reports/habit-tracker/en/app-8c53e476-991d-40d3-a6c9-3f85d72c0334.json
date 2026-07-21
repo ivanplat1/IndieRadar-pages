@@ -1,0 +1,10 @@
+{
+  "appId": "8c53e476-991d-40d3-a6c9-3f85d72c0334",
+  "appIndex": 17,
+  "appName": "Habit Tracker - HabitGenius",
+  "generatedAt": "2026-07-21T14:07:18.444Z",
+  "locale": "en",
+  "markdown": "# Habit Tracker - HabitGenius · Habit Tracker\n\nGenerated: Jul 21, 2026, 7:07 PM\n\n## **Contents** {#toc}\n\n- [Bugs and stability](#theme-bugs_stability)\n\n\n## **Bugs and stability** {#theme-bugs_stability}\n\n   **Bugs and stability.**\n      4 recent review(s) mention bugs and stability.\n      Review window: Jun 16, 2026 - Jun 16, 2026\n      **Why it matters:** Users report reliability problems. This points to quality gaps competitors can exploit.\n\n         **Review examples:**\n            1. _Danny Trobec_, Jun 16, 2026, 1/5: \"app keeps on crashing and giving me an error message that my device is not up to date even though it's running android 16\"\n            2. _Vinay Kumar_, 4/5: \"Subject: App Not Compatible with Moto Edge 60 Pro Hello Developer Team, I am using a Moto Edge 60 Pro, but I am unable to download your app from the Google Play Store because it says \"This app isn't compatible with your device.\" My device details: Device: Moto Edge 60 Pro Issue: App is not compatible and cannot be downloaded from the Play Store. Please check whether there is a compatibility issue with the Moto Edge 60 Pro and let me know if a fix or update is planned. thank you\"\n            3. _Vinaya H R_, 4/5: \"I am using Moto Edge 60 Pro with Android 16 (latest version). Habit Genius is showing “not compatible” on the Play Store, so I cannot install it normally. I also tried installing it via APK from another phone, but it still does not open. My device shows a warning “this app might be harmful” and blocks it from running. This seems like an Android 16 compatibility issue or a Play Protect/app signing problem. Please check device compatibility and update the app so it works on newer Android versions\"",
+  "nicheSlug": "habit-tracker",
+  "type": "app"
+}
