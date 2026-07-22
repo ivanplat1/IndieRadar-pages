@@ -2,13 +2,15 @@
 
 Bot: [@IndieRadarBot](https://t.me/IndieRadarBot) (display name: **IndieRadar**)
 
-Delivery modes, no always-on server:
+Delivery modes, no always-on server in production yet (see `docs/VPS_HOSTING_PLAN.md` for post-beta hosting):
 
 | Mode | Command | When |
 |---|---|---|
 | On-demand | `npm run dev:telegram` | Local long polling; onboarding + `/report` + `/week` |
 | Daily push | `npm run push:telegram` | GitHub Actions after nightly crawl → active subscribers (delta-only) |
 | Weekly push | `npm run push:telegram:weekly` | Sunday GHA + manual dispatch → active subscribers (**always** send) |
+
+**Beta:** crawl + push run on **GitHub Actions**; interactive bot is **local** for testers. Multi-user prod → VPS plan above.
 
 ## Environment variables
 

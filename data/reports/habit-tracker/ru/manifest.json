@@ -6,58 +6,58 @@
       "number": 1
     },
     {
-      "id": "9d802231-58eb-4a45-aa89-3ced7bb76b9e",
-      "name": "Habit Rabbit: Habit Tracker",
+      "id": "ed7b90ce-7a42-48d6-b7d5-b8d6b5ae83b5",
+      "name": "Habit Tracker, Routine Planner",
       "number": 2
     },
     {
-      "id": "6d4793b8-769a-4a38-9e61-ccda1c906f2f",
-      "name": "Way of Life - Habit Tracker",
+      "id": "9d802231-58eb-4a45-aa89-3ced7bb76b9e",
+      "name": "Habit Rabbit: Habit Tracker",
       "number": 3
     },
     {
-      "id": "b73ccd09-ee48-4764-ac77-4f09d0e7fa84",
-      "name": "Habit Tracker - Hábitos",
+      "id": "6d4793b8-769a-4a38-9e61-ccda1c906f2f",
+      "name": "Way of Life: habit tracker",
       "number": 4
+    },
+    {
+      "id": "96cca22d-6ab9-4467-8d06-e5aa9c09af1d",
+      "name": "Habit Tracker",
+      "number": 5
     },
     {
       "id": "661356d0-48a9-4d04-a931-ac2e9e6d3cb0",
       "name": "Habitify: Habit Tracker",
-      "number": 5
+      "number": 6
     },
     {
       "id": "5ee51211-f93a-432b-b2c2-2e050746c7d7",
       "name": "Habitica",
-      "number": 6
+      "number": 7
     },
     {
       "id": "a871684c-de17-4231-b571-53c71c488fa0",
       "name": "Atoms - from Atomic Habits",
-      "number": 7
+      "number": 8
     },
     {
       "id": "860d47e3-91fb-41a2-a762-b6785b207899",
       "name": "Finch: Self-Care Pet",
-      "number": 8
+      "number": 9
     },
     {
       "id": "8abfc268-acfd-41b8-a937-0c315f34a8db",
       "name": "(Not Boring) Habits",
-      "number": 9
+      "number": 10
     },
     {
       "id": "451af485-4e57-456a-b0bc-61d948f71749",
       "name": "Habit Tracker - HabitKit",
-      "number": 10
-    },
-    {
-      "id": "ef6da155-414e-4acf-9688-dabb0ae37bc1",
-      "name": "Habitify — Hábitos & Rotina",
       "number": 11
     },
     {
-      "id": "82b7ccb7-78b8-4d19-bbb0-0e3531f76240",
-      "name": "Grit: Habits, Routines, Goals",
+      "id": "cc6fa4f2-a362-4000-8f21-715ee6fa0d61",
+      "name": "Grit: Habitudes Routines TDAH",
       "number": 12
     },
     {
@@ -86,22 +86,22 @@
       "number": 17
     },
     {
+      "id": "1645377b-6e7b-4982-8a8b-06658488e96c",
+      "name": "Routine Planner, Habit Tracker",
+      "number": 18
+    },
+    {
       "id": "51f02bd9-18ae-46a1-a06b-cd89d20c2e80",
       "name": "Habit Tracker - To-Do List",
-      "number": 18
+      "number": 19
     },
     {
       "id": "feb6c379-d6fa-449c-a6c6-b9aa9a863e9f",
       "name": "Habit Tracker: Abletobe",
-      "number": 19
-    },
-    {
-      "id": "f4569d0c-357f-49cd-833b-6ca49a4dd54a",
-      "name": "Habit Pixel: Rastreador",
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-21T14:06:49.263Z",
+  "generatedAt": "2026-07-22T06:08:17.572Z",
   "locale": "ru",
   "nicheSlug": "habit-tracker"
 }

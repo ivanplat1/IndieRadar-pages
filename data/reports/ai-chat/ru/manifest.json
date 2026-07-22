@@ -1,13 +1,13 @@
 {
   "apps": [
     {
-      "id": "941d561a-92e1-49fa-b163-475e811235ad",
-      "name": "PolyBuzz: Fale com Amigos IA",
+      "id": "0f547132-b921-43a0-867a-343156138686",
+      "name": "Sea Soul: AI Chat",
       "number": 1
     },
     {
-      "id": "0f547132-b921-43a0-867a-343156138686",
-      "name": "Sea Soul: AI Chat",
+      "id": "941d561a-92e1-49fa-b163-475e811235ad",
+      "name": "PolyBuzz: Fale com Amigos IA",
       "number": 2
     },
     {
@@ -21,23 +21,23 @@
       "number": 4
     },
     {
-      "id": "d892d6bb-c120-40e6-b0c6-d73f5d08daac",
-      "name": "Claude by Anthropic",
+      "id": "5af6f8d1-a675-4f48-978b-033cb7b47278",
+      "name": "BALA AI: Create, Chat, Talk",
       "number": 5
     },
     {
-      "id": "5af6f8d1-a675-4f48-978b-033cb7b47278",
-      "name": "BALA AI: Create, Chat, Talk",
+      "id": "09af4b20-a3b8-4a84-82da-547211c04bd0",
+      "name": "Grok: AI chat på svenska",
       "number": 6
-    },
-    {
-      "id": "cb97c1ee-6252-42f5-9e80-f2c2c4b885e2",
-      "name": "Grok - Assistente de IA",
-      "number": 7
     },
     {
       "id": "e97f87d9-f5af-472b-bf5c-142df5def828",
       "name": "Chai: Chat AI Platform",
+      "number": 7
+    },
+    {
+      "id": "d892d6bb-c120-40e6-b0c6-d73f5d08daac",
+      "name": "Claude by Anthropic",
       "number": 8
     },
     {
@@ -56,52 +56,52 @@
       "number": 11
     },
     {
+      "id": "1c366a3e-1f1a-4843-a233-ff2be07c39b0",
+      "name": "Emochi: Chat With Character",
+      "number": 12
+    },
+    {
       "id": "3543de91-2f39-49ae-9ca9-577fe6d23e2b",
       "name": "Replika: My AI Friend",
-      "number": 12
+      "number": 13
     },
     {
       "id": "6542adaf-1e9f-424e-9f0e-a951fe8b52c9",
       "name": "Janitor AI - Official App",
-      "number": 13
-    },
-    {
-      "id": "12e3303c-ea81-4b5d-b5d2-57a2a15c69b4",
-      "name": "Talkie Lab - AI Playground",
       "number": 14
     },
     {
-      "id": "97c428e9-f618-4ca2-91cf-f6b3724230c3",
-      "name": "Vibe by Mistral (ex-Le Chat)",
+      "id": "cab6efe0-36e1-4d29-9179-eaeeaafc5e42",
+      "name": "Microsoft 365 Copilot",
       "number": 15
-    },
-    {
-      "id": "0de827fb-12f0-4c61-baf8-da26834dd971",
-      "name": "EMOCHI World: AI Story Chat",
-      "number": 16
-    },
-    {
-      "id": "5909b8a1-33b4-478a-826e-4ec528187c55",
-      "name": "Replika - AI Companion Chat",
-      "number": 17
     },
     {
       "id": "e78dad0d-2d7b-482e-b487-ceb3d1c71a9a",
       "name": "Dokichat - Romantic AI Chats",
+      "number": 16
+    },
+    {
+      "id": "12e3303c-ea81-4b5d-b5d2-57a2a15c69b4",
+      "name": "Talkie Lab - AI Playground",
+      "number": 17
+    },
+    {
+      "id": "97c428e9-f618-4ca2-91cf-f6b3724230c3",
+      "name": "Vibe by Mistral (ex-Le Chat)",
       "number": 18
     },
     {
-      "id": "afe5dd39-27ca-4014-a4e0-c06adfda3c60",
-      "name": "SexyChat-AI RolePlay CrushChat",
+      "id": "edf546df-efbe-4608-bae1-fe67ba98ae06",
+      "name": "Microsoft Copilot",
       "number": 19
     },
     {
-      "id": "d8607af9-6a88-4f7e-bd1a-c9ca78dea288",
-      "name": "Perplexity - Basta Perguntar",
+      "id": "0de827fb-12f0-4c61-baf8-da26834dd971",
+      "name": "EMOCHI World: AI Story Chat",
       "number": 20
     }
   ],
-  "generatedAt": "2026-07-21T14:07:45.197Z",
+  "generatedAt": "2026-07-22T06:09:57.467Z",
   "locale": "ru",
   "nicheSlug": "ai-chat"
 }

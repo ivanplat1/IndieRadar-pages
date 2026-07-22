@@ -1,4 +1,4 @@
-# Ops Telegram Alerts (v1)
+# Ops Telegram Alerts
 
 Admin-only alerts when a key GitHub Actions workflow fails.
 
@@ -16,6 +16,20 @@ Workflow: `.github/workflows/ops-telegram-alerts.yml`
 
 Successful runs do **not** send a message.
 
+### v2 — silent failures now fail the workflow
+
+Previously some pipeline steps could succeed while delivery was broken (Pages skipped, stale exports, zero signals). **Daily Crawl** now ends with health checks that **fail the job** → same ops alert as any other GHA failure.
+
+| Check | When | Fails if |
+|---|---|---|
+| Pages deploy required | after export | `PAGES_DEPLOY_TOKEN` / `PAGES_REPOSITORY` missing, or no git diff to push |
+| Local exports fresh | after deploy + push | any `docs/data/reports/{niche}/{locale}/daily.json` missing or `generatedAt` older than 6h |
+| Live Pages fresh | after deploy + push | public `daily.json` missing, stale, or unreachable (retries up to ~3 min) |
+| Signal health | after deploy + push | any beta niche has &lt; 1 signal in 48h, or latest crawl created 0 review signals |
+| Telegram push | push step | any recipient send failed |
+
+Tune thresholds via env (see below).
+
 ## Message shape
 
 ```text
@@ -26,7 +40,7 @@ Repo: owner/IndieRadar
 Branch: main
 SHA: abc1234
 Failed job: crawl
-Failed step: Run crawler
+Failed step: Verify nightly pipeline health
 
 View run
 ```
@@ -45,12 +59,27 @@ Rendered as Telegram HTML. **Failed job** / **Failed step** come from the Action
 |---|---|---|
 | `TELEGRAM_OPS_BOT_TOKEN` | GitHub Actions secret + local `.env` | Ops bot token (not product bot) |
 | `TELEGRAM_OPS_ADMIN_CHAT_ID` | GitHub Actions secret + local `.env` | Ops alert recipient |
+| `PAGES_DEPLOY_TOKEN` | GitHub Actions secret | Required for nightly Pages deploy |
+| `PAGES_REPOSITORY` | GitHub Actions secret | Public Pages repo (`owner/IndieRadar-pages`) |
+| `REPORT_PAGES_BASE_URL` | GitHub Actions secret (optional) | Live Pages check URL base |
 | `GITHUB_TOKEN` | Actions default (optional locally) | Fetch failed job names |
 | `GITHUB_WORKFLOW` | Actions / manual | Workflow display name |
 | `GITHUB_REPOSITORY` | Actions / manual | `owner/repo` |
 | `GITHUB_SHA` | Actions / manual | Commit SHA |
 | `GITHUB_REF` | Actions / manual | Branch name or `refs/heads/...` |
 | `GITHUB_RUN_ID` | Actions / manual | Run id for the Actions URL |
+
+### Pipeline health tuning (optional)
+
+| Name | Default | Purpose |
+|---|---|---|
+| `PIPELINE_REQUIRE_PAGES_DEPLOY` | `1` in Daily Crawl | Require live Pages freshness check |
+| `OPS_EXPORT_MAX_AGE_HOURS` | `6` | Max age for local + live `daily.json` |
+| `OPS_SIGNAL_WINDOW_HOURS` | `48` | Window for per-niche signal counts |
+| `OPS_MIN_SIGNALS_PER_NICHE` | `1` | Minimum signals per beta niche |
+| `OPS_MIN_REVIEW_SIGNALS_CREATED` | `1` | Minimum `reviewSignalsCreated` in latest crawl stats |
+| `OPS_PAGES_LIVE_ATTEMPTS` | `6` | Live Pages HTTP retries |
+| `OPS_PAGES_LIVE_DELAY_MS` | `30000` | Delay between live Pages retries |
 
 Permissions on the alert job: `actions: read` (job details), `contents: read` (checkout).
 
@@ -73,6 +102,19 @@ npm run alert:gha
 
 Expect one message from the **ops** bot in the ops admin chat.
 
+### Pipeline health (local)
+
+```bash
+# After export + Pages deploy
+PIPELINE_REQUIRE_PAGES_DEPLOY=1 npm run verify:pipeline
+
+# Pages / exports only
+PIPELINE_REQUIRE_PAGES_DEPLOY=1 npm run verify:pages
+
+# Supabase signal counts only
+npm run verify:signals
+```
+
 ## Intentional failure test (GHA)
 
 1. Confirm secrets `TELEGRAM_OPS_BOT_TOKEN` and `TELEGRAM_OPS_ADMIN_CHAT_ID` exist in the repo.
@@ -90,10 +132,12 @@ Expect one message from the **ops** bot in the ops admin chat.
 | Command | Package |
 |---|---|
 | `npm run alert:gha` | root → `@indieradar/telegram` |
-| `npm run alert:gha -w @indieradar/telegram` | `tsx src/alertGhaFailure.ts` |
+| `npm run verify:pipeline` | nightly: signals + exports + live Pages |
+| `npm run verify:pages` | exports + live Pages only |
+| `npm run verify:signals` | Supabase signal health only |
 
-## Out of scope (v1)
+## Out of scope
 
 - Alerts to beta subscribers
-- Crawl quality / zero-signals alerts
+- Warning alerts on successful runs (failures only — keeps noise low)
 - Reusing the product bot token

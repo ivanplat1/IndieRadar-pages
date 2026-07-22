@@ -31,9 +31,12 @@ Store APIs only return a short review tail (~50). Backfill cannot reconstruct a 
 
 ## Weekly path
 
-Sunday `04:30 UTC` — `.github/workflows/trend-weekly-rollup.yml` rolls up all five niches (or one niche when `workflow_dispatch` input is set):
+Sunday **09:30 Asia/Almaty** via local launchd (`scripts/local-ops/weekly-rollup.sh`).  
+GHA schedule is disabled — see `docs/LOCAL_OPS_SCHEDULE.md`.
 
 ```bash
+npm run ops:weekly-rollup
+# or one niche:
 npm run rollup:weekly -- productivity
 # optional: --week 2026-07-13   # Monday UTC
 ```

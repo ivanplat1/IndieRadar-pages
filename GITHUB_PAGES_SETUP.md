@@ -27,9 +27,11 @@ The deploy job uses `git rsync` (not JamesIves action) and skips gracefully if s
 
 ## URLs
 
-- Daily brief: `https://ivanplat1.github.io/IndieRadar-pages/report/?niche=productivity&locale=ru`
-- Weekly brief: `https://ivanplat1.github.io/IndieRadar-pages/report/?niche=productivity&locale=ru&period=week`
-- App themes: `https://ivanplat1.github.io/IndieRadar-pages/report/?niche=productivity&locale=ru&app=<canonical_app_id>`
+- Daily brief: `https://ivanplat1.github.io/IndieRadar-pages/report/?q=productivity/ru`
+- Weekly brief: `https://ivanplat1.github.io/IndieRadar-pages/report/?q=productivity/ru/week`
+- App themes: `https://ivanplat1.github.io/IndieRadar-pages/report/?q=productivity/ru/app/<canonical_app_id>`
+
+Legacy `?niche=&locale=&app=&period=` links still work in the viewer.
 
 App links use a stable `canonical_app_id` (not rank position), so Telegram links stay correct when the priority order changes.
 
